@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+<!--        <link rel="stylesheet" href="js/jquery.mobile-1.2.0.min.css"
+-->        <meta http-equiv="cleartype" content="on">
+    <script src="js/libs/modernizr.custom.min.js"></script>
+
+    <title>Home Watch Checklist</title>
+</head>
+
+<body>
+	<div data-role"page" id="exterior" data-theme="d">
+        	<div data-role="header" data-theme="b" data-position="fixed">
+            	<a href="#home" data-role="button" data-icon="home" data-iconpos="left">Home</a>
+            	<h3>Exterior</h3>
+            </div>
+        	
+            <div data-role="content">
+            	<form action="#" id="exteriorForm">
+                	<div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Remove solicitations, newspapers, phonebooks, and debris:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext1" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext1" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext1" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext1notes">Comments:</label>
+                        <textarea id="ext1notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check all doors and windows for signs of weather damage and vandalism:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext2" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext2" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext2" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext2notes">Comments:</label>
+                        <textarea id="ext2notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check irrigation system and timer setting:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext3" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext3" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext3" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext3notes">Comments:</label>
+                        <textarea id="ext3notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Visual inspection of landscaping and weeds:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext4" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext4" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext4" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext4notes">Comments:</label>
+                        <textarea id="ext4notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Visual inspection of pool and spa area- water level, service:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext5" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext5" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext5" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext5notes">Comments:</label>
+                        <textarea id="ext5notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check for signs of pests, wasp/bee nests and mold:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext6" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext6" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext6" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext6notes">Comments:</label>
+                        <textarea id="ext6notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                   <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check faucets and hoses for leaks:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext7" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext7" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext7" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext7notes">Comments:</label>
+                        <textarea id="ext7notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                	<div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check and replace any burned out security light bulbs:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext8" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext8" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext8" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext8notes">Comments:</label>
+                        <textarea id="ext8notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Inspect screen enclosed patio for damage/tampering:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext9" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext9" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext9" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext9notes">Comments:</label>
+                        <textarea id="ext9notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Check mail box for mail/tampering:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext10" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext10" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext10" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext10notes">Comments:</label>
+                        <textarea id="ext10notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                        	<legend><h4>Sweep front entry:</h4></legend>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="ext11" value="Yes" id="yes" data-theme="b"/>
+                            <label for="no" >No</label>
+                            <input type="radio" name="ext11" value="No" id="no" data-theme="b"/>
+                            <label for="na" >N/A</label>
+                            <input type="radio" name="ext11" value="NA" id="na" data-theme="b"/>
+                        </fieldset>
+                        <br/>
+                        <label for="ext11notes">Comments:</label>
+                        <textarea id="ext11notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                    </div>
+                	<div data-role="fieldcontain">
+                    	<a href="#interior"><input type="submit" id="extSubmit" value="Save and Continue" data-theme="b"/></a>
+                    </div>
+                </form>
+            
+            </div>
+            
+            <div data-role="footer" data-theme="b" data-position="fixed">
+            	<h4>footer</h4>
+            </div>
+        </div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+<!--	<script type="text/javascript" src="js/libs/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.mobile-1.2.0.min.js"></script>
+-->
+</body>
+</html>

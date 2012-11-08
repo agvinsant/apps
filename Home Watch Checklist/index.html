@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<!--        <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"
+-->        <meta http-equiv="cleartype" content="on">
+		<script src="js/libs/modernizr.custom.min.js"></script>
+    
+        <title>Home Watch Checklist</title>
+    </head>
+    
+    <body>
+    	<div data-role="page" id="home" data-theme="d">
+        	<div data-role="header" data-theme="b" data-position="fixed">
+            	<h3>Home Watch Checklist</h3>
+            </div>
+            
+            <div data-role="content">
+            	<h3 align="center">Welcome to the Home Watch Checklist</h3>
+                <center><img src="images/homewatch.jpeg"/></center>
+                <form action="checklist.php" method="post" id="form"></form>
+                    <section data-role="collapsible-set" data-theme="b" data-inset="false" >
+                        <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom" id="info">
+                            <h3>Customer Information</h3>
+                            <ul data-role="listview">  
+       
+                                <li>
+                                    <label for="clientName">Enter client's name:</label>
+                                    <input type="text" id="clientName" name="clientName" placeholder="First and Last Name"/>
+                            	</li>
+                            	<li>
+                                    <label for="clientEmail">Enter client's email address:</label>
+                                    <input type="email" id="clientEmail" name="clientEmail" placeholder="clientEmail@email.com"/>
+                            	</li>
+                            	<li>
+                                    <label for="homeAddress">Enter client's Home Address:</label>
+                                    <textarea id="address" name="address" placeholder="1234 Street Name, City, State, Zip"></textarea>
+                           		</li>
+                                <li>
+                                	<label for="date">Date Completed:</label>
+                                    <input type="date" name="date" id="date" placeholder="MM/DD/YYYY"/>
+                                </li>
+                            </ul>
+                       </div>
+                       
+                       <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom">
+                        	<h3>Exterior Checklist</h3>	
+                           <ul data-role="listview"> 
+                                <li style="display:block">
+                                    <label for="ext1">Remove solicitations, newspapers, phonebooks, and debris:</label>
+                                    <select data-role="slider" name="ext1" id="ext1" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext1notes">Comments:</label>
+                                    <textarea id="ext1notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext2">Check all doors and windows for signs of weather damage and vandalism:</label>
+                                    <select data-role="slider" name="ext2" id="ext2" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext2notes">Comments:</label>
+                                    <textarea id="ext2notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                               <li style="display:block">
+                                    <label for="ext3">Check irrigation system and timer setting:</label>
+                                    <select data-role="slider" name="ext3" id="ext3" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext3notes">Comments:</label>
+                                    <textarea id="ext3notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext4">Visual inspection of landscaping and weeds:</label>
+                                    <select data-role="slider" name="ext4" id="ext4" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext4notes">Comments:</label>
+                                    <textarea id="ext4notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext5">Visual inspection of pool and spa area- water level, service:</label>
+                                    <select data-role="slider" name="ext5" id="ext5" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext5notes">Comments:</label>
+                                    <textarea id="ext5notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext6">Check for signs of pests, wasp/bee nests and mold:</label>
+                                    <select data-role="slider" name="ext6" id="ext6" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext6notes">Comments:</label>
+                                    <textarea id="ext6notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext7">Check faucets and hoses for leaks:</label>
+                                    <select data-role="slider" name="ext7" id="ext7" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext7notes">Comments:</label>
+                                    <textarea id="ext7notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext8">Check and replace any burned out security light bulbs:</label>
+                                    <select data-role="slider" name="ext8" id="ext8" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext8notes">Comments:</label>
+                                    <textarea id="ext8notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext9">Inspect screen enclosed patio for damage/tampering:</label>
+                                    <select data-role="slider" name="ext9" id="ext9" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext9notes">Comments:</label>
+                                    <textarea id="ext9notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext10">Check mail box for mail/tampering:</label>
+                                    <select data-role="slider" name="ext10" id="ext10" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext10notes">Comments:</label>
+                                    <textarea id="ext10notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="ext11">Sweep front entry:</label>
+                                    <select data-role="slider" name="ext11" id="ext11" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="ext11notes">Comments:</label>
+                                    <textarea id="ext11notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                           </ul> 
+                        </div>
+                       
+                        
+                        <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom">
+                        	<h3>Interior Checklist</h3>
+                            <ul data-role="listview">
+                            	<li style="display:block">
+                                    <label for="int1">Alarm system check:</label>
+                                    <select data-role="slider" name="int1" id="int1" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int1notes">Comments:</label>
+                                    <textarea id="int1notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int2">Check if all doors and windows are locked:</label>
+                                    <select data-role="slider" name="int2" id="int2" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int2notes">Comments:</label>
+                                    <textarea id="int2notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int3">Check sinks, drains, showers, and tubs for leaks:</label>
+                                    <select data-role="slider" name="int3" id="int3" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int3notes">Comments:</label>
+                                    <textarea id="int3notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int4">Check for signs of pest infestation:</label>
+                                    <select data-role="slider" name="int4" id="int4" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int4notes">Comments:</label>
+                                    <textarea id="int4notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int5">Check for signs of mold, unusual sounds or smells:</label>
+                                    <select data-role="slider" name="int5" id="int5" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int5notes">Comments:</label>
+                                    <textarea id="int5notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int6">Flush toilets, run faucets, check for leaks:</label>
+                                    <select data-role="slider" name="int6" id="int6" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int6notes">Comments:</label>
+                                    <textarea id="int6notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int7">Refrigerator - Operation & temperature settings:</label>
+                                    <select data-role="slider" name="int7" id="int7" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int7notes">Comments:</label>
+                                    <textarea id="int7notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int8">Dishwasher - Check for leaks:</label>
+                                    <select data-role="slider" name="int8" id="int8" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int8notes">Comments:</label>
+                                    <textarea id="int8notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int9">Garbage disposal - Operate, run water, check for leaks:</label>
+                                    <select data-role="slider" name="int9" id="int9" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int9notes">Comments:</label>
+                                    <textarea id="int9notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int10">Air Conditioning - temperature check - filters:</label>
+                                    <select data-role="slider" name="int10" id="int10" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int10notes">Comments:</label>
+                                    <textarea id="int10notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int11">Smoke Detectors - batteries:</label>
+                                    <select data-role="slider" name="int11" id="int11" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int11notes">Comments:</label>
+                                    <textarea id="int11notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int12">Security lights/timers - replace bulbs:</label>
+                                    <select data-role="slider" name="int12" id="int12" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int12notes">Comments:</label>
+                                    <textarea id="int12notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int13">Water Softener -salt level:</label>
+                                    <select data-role="slider" name="int13" id="int13" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int13notes">Comments:</label>
+                                    <textarea id="int13notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int14">Clothes Washer - check for leaks:</label>
+                                    <select data-role="slider" name="int14" id="int14" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int14notes">Comments:</label>
+                                    <textarea id="int14notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int15">Water indoor plants:</label>
+                                    <select data-role="slider" name="int15" id="int15" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int15notes">Comments:</label>
+                                    <textarea id="int15notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int16">Check that garage door opener is unplugged or locked:</label>
+                                    <select data-role="slider" name="int16" id="int16" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int16notes">Comments:</label>
+                                    <textarea id="int16notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int17">Start and run vehicle motor:</label>
+                                    <select data-role="slider" name="int17" id="int17" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int17notes">Comments:</label>
+                                    <textarea id="int17notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                                <li style="display:block">
+                                    <label for="int18">Recheck all door and window locks, lock front door upon leaving:</label>
+                                    <select data-role="slider" name="int18" id="int18" data-theme="b">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                    <label for="int18notes">Comments:</label>
+                                    <textarea id="int18notes" placeholder="Comments for this item" data-theme="b"></textarea>
+                                </li>
+                            </ul>
+                        </div>
+                   </section>
+             		<center><div data-role="fieldcontain">
+                    	<input type="submit" data-role="button" data-theme="a" id="submit" value="Submit Checklist"/>	
+                    </div></center>
+                    
+               </form>
+               
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+            	<h4>footer</h4>
+            </div>
+        </div>
+        
+        
+        
+        
+    
+    	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    </body>
+</html>

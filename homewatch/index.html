@@ -14,17 +14,31 @@
     </head>
     
     <body>
-    	<div data-role="page" id="home" data-theme="d">
+    	<div data-role="page" id="home" data-theme="a">
         	<div data-role="header" data-theme="b" data-position="fixed">
-            	<h3>Home Watch Checklist</h3>
+            	<img src="images/HWC header.png" width="100%" height="auto"/>
             </div>
             
             <div data-role="content">
-            	<h3 align="center">Welcome to the Home Watch Checklist</h3>
-                <center><img src="images/homewatch.jpeg"/></center>
+            	<center><h3>Welcome to the Home Watch Checklist</h3></center>
+                
                 <form action="checklist.php" method="post" id="form"></form>
+                    
                     <section data-role="collapsible-set" data-theme="b" data-inset="false" >
-                        <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom" id="info">
+                        <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom">
+                            <h3>Your Information</h3>
+                            <ul data-role="listview">
+                                <li>
+                                    <label for="yourName">Enter your name:</label>
+                                    <input type="text" id="yourName" name="yourName" placeholder="Your name or company name"/>
+                                </li>
+                                <li>
+                                    <label for="yourEmail">Enter your email address:</label>
+                                    <input type="email" id="yourEmail" name="yourEmail" placeholder="yourEmail@email.com"/>
+                                </li>
+                            </ul>
+                    </div>
+                        <div data-role="collapsible" data-collapsed="true" data-iconpos="bottom">
                             <h3>Customer Information</h3>
                             <ul data-role="listview">  
        
@@ -322,7 +336,7 @@
                         </div>
                    </section>
              		<center><div data-role="fieldcontain">
-                    	<input type="submit" data-role="button" data-theme="a" id="submit" value="Submit Checklist"/>	
+                    	<input type="submit" data-role="button" data-theme="b" id="submit" value="Submit Checklist"/>	
                     </div></center>
                     
                </form>

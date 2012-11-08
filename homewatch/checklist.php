@@ -10,6 +10,8 @@
 
 		$to = $_POST['clientEmail'];
 		$subject = 'Home watch checklist results';
+		$from =  $_POST['yourEmail'];
+		$headers = "From:" .$from;
 		
     	$message = '<h3>Client Information</h3>';
     	$message .= '<p>Client Name:</p>';
@@ -141,7 +143,7 @@
         $message .=$_POST['int18']; 
         $message .=$_POST['int18notes']; 
 		
-		mail($to, $subject, $message);
+		mail($to, $subject, $message, $headers);
 		echo "Checklist Sent";
 ?>
 

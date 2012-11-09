@@ -21,7 +21,7 @@
         $message .= '<p>Client Address:</p>';
 		$message .= $_POST['address'];
         $message .= '<p>Data Completed:</p>';
-		$message .= $_POST['data'];
+		$message .= $_POST['date'];
 		$message .= '<br/>';
         $message .= '<h3>Exterior Checklist</h3>';
 		$message .= '<br/>';
